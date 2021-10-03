@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">E Comm App</string>
+
+    <string name="onboarding_header_1"><b>45 Money Return</b></string>
+    <string name="onboarding_header_2"><b>Secure Payment</b></string>
+    <string name="onboarding_header_3"><b>Free \nDelivery</b></string>
+
+    <string name="onboard_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="product_item_old_price"><strike>StrikeThrough</strike></string>
+</resources>

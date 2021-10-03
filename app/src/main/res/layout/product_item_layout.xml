@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:id="@+id/container_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/img_product_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            app:cardElevation="0dp"
+            >
+
+            <ImageView
+                android:id="@+id/img_product_item_not_card"
+                android:layout_width="150dp"
+                android:layout_height="200dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/tv_product_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:textColor="#717081"
+            android:textSize="20dp"
+            android:text="Men's Oxford Shirt"
+            android:textAllCaps="true"
+            android:fontFamily="sans-serif-black"
+            android:layout_below="@id/img_product_item"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_product_item_new_price"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:text="$35.00"
+            android:textColor="@color/tomato"
+            android:fontFamily="sans-serif-black"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/tv_product_item_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_product_item_label"
+            android:text="$35.00"
+            android:textColor="#a9a7b4"
+            android:fontFamily="sans-serif-black"
+            android:layout_toRightOf="@id/tv_product_item_new_price"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout >

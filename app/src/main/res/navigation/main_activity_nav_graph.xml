@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.ecommapp.main_activity.fragments.home_fragment.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/home_fragment_layout" >
+        <action
+            android:id="@+id/action_homeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newCollectionFragment"
+            app:destination="@id/newCollectionFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.ecommapp.main_activity.fragments.settings_fragment.SettingsFragment"
+        android:label="Settings Fragment"
+        tools:layout="@layout/settings_fragment_layout" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.ecommapp.main_activity.fragments.categories_fragment.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/categories_fragment_layout" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.ecommapp.main_activity.fragments.notifications_fragment.NotificationsFragment"
+        android:label="Notification"
+        tools:layout="@layout/notifications_fragment_layout" />
+    <fragment
+        android:id="@+id/newCollectionFragment"
+        android:name="com.example.ecommapp.main_activity.fragments.new_collection_fragment.NewCollectionFragment"
+        android:label="New Collection"
+        tools:layout="@layout/new_collections_fragment_layout" >
+        <action
+            android:id="@+id/action_newCollectionFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.ecommapp.main_activity.shared_files.fragments.product_fragment.ProductFragment"
+        android:label="{label}"
+        tools:layout="@layout/product_fragment_layout" >
+        <argument
+            android:name="product_data"
+            app:argType="com.example.ecommapp.main_activity.data.Product" />
+        <argument
+            android:name="label"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_productFragment_to_newCollectionFragment"
+            app:destination="@id/newCollectionFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="destination_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.ecommapp.main_activity.shared_files.fragments.cart_fragment.CartFragment"
+        android:label="CartFragment" /><action android:id="@+id/action_global_cartFragment" app:destination="@id/cartFragment"/>
+
+</navigation>
